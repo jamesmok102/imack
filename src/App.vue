@@ -1,5 +1,7 @@
 <template>
 
+  <div id="loader" class="center"></div>
+
   <input type="checkbox" name="/" id= "side-menu-switch">
 
   <div class="bg-white shadow side-menu" style="">
@@ -215,11 +217,24 @@ a:hover {
 #side-menu-switch:checked + .side-menu{
   transform: translateX(0%);
 }
-
 </style>
 
 <script>
 import {onMounted, onUnmounted, ref} from "vue";
+
+document.onreadystatechange = function() {
+  if (document.readyState !== "complete") {
+    document.querySelector(
+        "body").style.visibility = "hidden";
+    document.querySelector(
+        "#loader").style.visibility = "visible";
+  } else {
+    document.querySelector(
+        "#loader").style.display = "none";
+    document.querySelector(
+        "body").style.visibility = "visible";
+  }
+};
 
 export default {
   name: "app",
