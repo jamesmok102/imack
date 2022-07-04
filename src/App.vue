@@ -103,7 +103,7 @@
           <div class="container mx-auto">
             <h2 class="text-2xl text-center mb-6 font-semibold">維修保養</h2>
             <p class="leading-relaxed text-center font-semibold">
-              提供專業資訊技術員駐場支援服務
+              提供專業資訊技術員駐場支援服務。
             </p>
           </div>
         </div>
